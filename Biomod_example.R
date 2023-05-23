@@ -227,8 +227,10 @@ myBiomodEnProj <- BIOMOD_EnsembleForecasting(bm.em = myBiomodEM,
 plot(myBiomodEnProj)
 
 
-p1<- raster("proj_current_ClampingMask.img")
-plot(p1)
+utils::remove.packages("biomod2")
+devtools::install_gitlab("IanOndo/ShinyBIOMOD")
+library(ShinyBIOMOD)
+run_shinyBIOMOD()
 
 
 
